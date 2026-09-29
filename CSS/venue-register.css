@@ -1,0 +1,817 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lime: #d8f36a;
+    --lime-dark: #c7e457;
+
+    --black: #101210;
+    --dark: #151715;
+    --dark-card: #1b1e1b;
+
+    --white: #ffffff;
+    --text: #f2f4f0;
+    --muted: #929790;
+
+    --border: #303430;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--black);
+    color: var(--text);
+}
+
+
+/* ========================================
+   PAGE
+======================================== */
+
+.venue-register-page {
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.register-header {
+    height: 82px;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #252825;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--lime);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.header-right a {
+    color: var(--lime);
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.register-container {
+    width: min(100% - 40px, 920px);
+
+    margin: 0 auto;
+
+    padding: 70px 0 50px;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.register-intro {
+    max-width: 650px;
+
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    color: var(--lime);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.register-intro h1 {
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+
+    margin-bottom: 20px;
+}
+
+.register-intro > p:last-child {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    max-width: 580px;
+}
+
+
+/* ========================================
+   PROGRESS
+======================================== */
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 55px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    white-space: nowrap;
+}
+
+.progress-step span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.progress-step p {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.progress-step.active span {
+    background: var(--lime);
+
+    border-color: var(--lime);
+
+    color: #111;
+}
+
+.progress-step.active p {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.progress-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 0 15px;
+}
+
+
+/* ========================================
+   FORM SECTION
+======================================== */
+
+.venue-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.form-section {
+    background: var(--dark);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    padding: 32px;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.section-number {
+    color: var(--lime);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    padding-top: 4px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   FORM GRID
+======================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #dfe2dd;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: #111311;
+    color: var(--white);
+
+    padding: 13px 14px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group input {
+    height: 48px;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 100px;
+
+    line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #626761;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--lime);
+
+    box-shadow:
+        0 0 0 2px rgba(216, 243, 106, 0.08);
+}
+
+
+/* ========================================
+   PRICE INPUT
+======================================== */
+
+.input-prefix {
+    position: relative;
+}
+
+.input-prefix span {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.input-prefix input {
+    padding-left: 32px;
+}
+
+
+/* ========================================
+   SPORTS
+======================================== */
+
+.sport-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.sport-card {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.sport-card input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.sport-card > span:not(.sport-icon) {
+    display: block;
+}
+
+.sport-card {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 58px;
+
+    padding: 12px 14px;
+
+    background: #111311;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    color: #aeb3ad;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.sport-card:hover {
+    border-color: #555a54;
+    color: var(--white);
+}
+
+.sport-card:has(input:checked) {
+    border-color: var(--lime);
+
+    background: rgba(216, 243, 106, 0.08);
+
+    color: var(--white);
+}
+
+.sport-card:has(input:checked)::after {
+    content: "✓";
+
+    margin-left: auto;
+
+    color: var(--lime);
+
+    font-weight: 800;
+}
+
+.sport-icon {
+    font-size: 20px;
+}
+
+
+/* ========================================
+   AMENITIES
+======================================== */
+
+.amenities-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.amenity {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px;
+
+    background: #111311;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    color: #aeb3ad;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.amenity:hover {
+    border-color: #555a54;
+}
+
+.amenity input {
+    accent-color: var(--lime);
+
+    cursor: pointer;
+}
+
+.amenity:has(input:checked) {
+    border-color: var(--lime);
+    color: var(--white);
+}
+
+
+/* ========================================
+   UPLOAD
+======================================== */
+
+.upload-box {
+    min-height: 150px;
+
+    border: 1px dashed #454a44;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #111311;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.upload-box:hover {
+    border-color: var(--lime);
+
+    background: rgba(216, 243, 106, 0.03);
+}
+
+.upload-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #242824;
+
+    color: var(--lime);
+
+    font-size: 22px;
+}
+
+.upload-box strong {
+    font-size: 13px;
+}
+
+.upload-box span {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   TERMS
+======================================== */
+
+.terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+.terms input {
+    margin-top: 2px;
+
+    accent-color: var(--lime);
+}
+
+.terms a {
+    color: #d0d4ce;
+
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: var(--lime);
+}
+
+
+/* ========================================
+   SUBMIT
+======================================== */
+
+.form-submit {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 10px 5px 20px;
+}
+
+.form-submit p {
+    max-width: 420px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.register-btn {
+    min-width: 190px;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--lime);
+    color: #111;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    transition: 0.2s ease;
+}
+
+.register-btn span {
+    font-size: 20px;
+}
+
+.register-btn:hover {
+    background: var(--lime-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.register-footer {
+    width: min(100% - 40px, 920px);
+
+    margin: 0 auto;
+
+    padding: 25px 0 40px;
+
+    border-top: 1px solid #252825;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #626761;
+
+    font-size: 11px;
+}
+
+.register-footer a {
+    color: #858a83;
+
+    text-decoration: none;
+}
+
+.register-footer a:hover {
+    color: var(--lime);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .register-header {
+        padding: 0 25px;
+    }
+
+    .register-container {
+        padding-top: 50px;
+    }
+
+    .register-intro h1 {
+        font-size: 44px;
+    }
+
+    .sport-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .register-header {
+        height: 70px;
+    }
+
+    .header-right span {
+        display: none;
+    }
+
+    .register-container {
+        width: min(100% - 30px, 920px);
+
+        padding-top: 40px;
+    }
+
+    .register-intro {
+        margin-bottom: 35px;
+    }
+
+    .register-intro h1 {
+        font-size: 38px;
+        letter-spacing: -1.8px;
+    }
+
+    .progress-step p {
+        display: none;
+    }
+
+    .progress-line {
+        margin: 0 8px;
+    }
+
+    .form-section {
+        padding: 22px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .sport-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-submit {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-submit p {
+        max-width: none;
+    }
+
+    .register-btn {
+        width: 100%;
+    }
+
+    .register-footer {
+        width: min(100% - 30px, 920px);
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .register-intro h1 {
+        font-size: 33px;
+    }
+
+    .sport-grid,
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-step span {
+        width: 27px;
+        height: 27px;
+    }
+}

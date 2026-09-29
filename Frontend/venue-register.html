@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Venue | Sportify</title>
+
+    <link rel="stylesheet" href="../css/venue-register.css">
+</head>
+
+<body>
+
+    <main class="venue-register-page">
+
+        <!-- ================================
+             HEADER
+        ================================= -->
+
+        <header class="register-header">
+
+            <a href="../index.html" class="logo">
+                SPORTIFY<span>.</span>
+            </a>
+
+            <div class="header-right">
+                <span>Already a partner?</span>
+
+                <a href="./venue-login.html">
+                    Sign in
+                </a>
+            </div>
+
+        </header>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <section class="register-container">
+
+            <!-- Intro -->
+
+            <div class="register-intro">
+
+                <p class="eyebrow">VENUE PARTNER</p>
+
+                <h1>List your venue on Sportify.</h1>
+
+                <p>
+                    Reach more players, manage your bookings,
+                    and grow your sports business from one place.
+                </p>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-bar">
+
+                <div class="progress-step active">
+                    <span>1</span>
+                    <p>Venue details</p>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span>2</span>
+                    <p>Sports & pricing</p>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span>3</span>
+                    <p>Finish</p>
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 FORM
+            ================================= -->
+
+            <form class="venue-form" id="venueRegistrationForm">
+
+
+                <!-- ================================
+                     VENUE INFORMATION
+                ================================= -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            01
+                        </div>
+
+                        <div>
+                            <h2>Venue information</h2>
+
+                            <p>
+                                Tell players what makes your venue special.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <!-- Venue Name -->
+
+                        <div class="form-group full-width">
+
+                            <label for="venueName">
+                                Venue name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="venueName"
+                                name="venueName"
+                                placeholder="e.g. Smash Arena"
+                            >
+
+                        </div>
+
+
+                        <!-- Owner Name -->
+
+                        <div class="form-group">
+
+                            <label for="ownerName">
+                                Owner / business name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="ownerName"
+                                name="ownerName"
+                                placeholder="Enter owner or business name"
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="form-group">
+
+                            <label for="businessEmail">
+                                Business email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="businessEmail"
+                                name="businessEmail"
+                                placeholder="business@example.com"
+                            >
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+91 98765 43210"
+                            >
+
+                        </div>
+
+
+                        <!-- City -->
+
+                        <div class="form-group">
+
+                            <label for="city">
+                                City
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="e.g. Chandigarh"
+                            >
+
+                        </div>
+
+
+                        <!-- Address -->
+
+                        <div class="form-group full-width">
+
+                            <label for="address">
+                                Venue address
+                            </label>
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="3"
+                                placeholder="Enter the complete venue address"
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================================
+                     SPORTS
+                ================================= -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            02
+                        </div>
+
+                        <div>
+                            <h2>Sports & facilities</h2>
+
+                            <p>
+                                Select the sports available at your venue.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Sports offered
+                        </label>
+
+                        <div class="sport-grid">
+
+                            <label class="sport-card">
+                                <input
+                                    type="checkbox"
+                                    name="sports"
+                                    value="cricket"
+                                >
+                                <span class="sport-icon">🏏</span>
+                                <span>Cricket</span>
+                            </label>
+
+
+                            <label class="sport-card">
+                                <input
+                                    type="checkbox"
+                                    name="sports"
+                                    value="football"
+                                >
+                                <span class="sport-icon">⚽</span>
+                                <span>Football</span>
+                            </label>
+
+
+                            <label class="sport-card">
+                                <input
+                                    type="checkbox"
+                                    name="sports"
+                                    value="badminton"
+                                >
+                                <span class="sport-icon">🏸</span>
+                                <span>Badminton</span>
+                            </label>
+
+
+                            <label class="sport-card">
+                                <input
+                                    type="checkbox"
+                                    name="sports"
+                                    value="tennis"
+                                >
+                                <span class="sport-icon">🎾</span>
+                                <span>Tennis</span>
+                            </label>
+
+
+                            <label class="sport-card">
+                                <input
+                                    type="checkbox"
+                                    name="sports"
+                                    value="basketball"
+                                >
+                                <span class="sport-icon">🏀</span>
+                                <span>Basketball</span>
+                            </label>
+
+
+                            <label class="sport-card">
+                                <input
+                                    type="checkbox"
+                                    name="sports"
+                                    value="volleyball"
+                                >
+                                <span class="sport-icon">🏐</span>
+                                <span>Volleyball</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <!-- Courts -->
+
+                        <div class="form-group">
+
+                            <label for="courts">
+                                Number of courts / grounds
+                            </label>
+
+                            <input
+                                type="number"
+                                id="courts"
+                                name="courts"
+                                min="1"
+                                placeholder="e.g. 4"
+                            >
+
+                        </div>
+
+
+                        <!-- Opening -->
+
+                        <div class="form-group">
+
+                            <label for="openingTime">
+                                Opening time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="openingTime"
+                                name="openingTime"
+                            >
+
+                        </div>
+
+
+                        <!-- Closing -->
+
+                        <div class="form-group">
+
+                            <label for="closingTime">
+                                Closing time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="closingTime"
+                                name="closingTime"
+                            >
+
+                        </div>
+
+
+                        <!-- Price -->
+
+                        <div class="form-group">
+
+                            <label for="price">
+                                Starting price / hour
+                            </label>
+
+                            <div class="input-prefix">
+                                <span>₹</span>
+
+                                <input
+                                    type="number"
+                                    id="price"
+                                    name="price"
+                                    min="0"
+                                    placeholder="500"
+                                >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================================
+                     AMENITIES
+                ================================= -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            03
+                        </div>
+
+                        <div>
+                            <h2>Amenities</h2>
+
+                            <p>
+                                Help players know what is available.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="amenities-grid">
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="parking"
+                            >
+                            <span>Parking</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="changing-room"
+                            >
+                            <span>Changing Room</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="washroom"
+                            >
+                            <span>Washroom</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="drinking-water"
+                            >
+                            <span>Drinking Water</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="showers"
+                            >
+                            <span>Showers</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="cafeteria"
+                            >
+                            <span>Cafeteria</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="equipment"
+                            >
+                            <span>Equipment Rental</span>
+                        </label>
+
+
+                        <label class="amenity">
+                            <input
+                                type="checkbox"
+                                name="amenities"
+                                value="wifi"
+                            >
+                            <span>Wi-Fi</span>
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================================
+                     DESCRIPTION
+                ================================= -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            04
+                        </div>
+
+                        <div>
+                            <h2>Tell players about your venue</h2>
+
+                            <p>
+                                Add a short description and some photos.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Venue description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="5"
+                            placeholder="Describe your venue, facilities, atmosphere, location, and anything else players should know..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Photos -->
+
+                    <div class="form-group">
+
+                        <label for="venuePhotos">
+                            Venue photos
+                        </label>
+
+                        <label class="upload-box" for="venuePhotos">
+
+                            <div class="upload-icon">
+                                ↑
+                            </div>
+
+                            <strong>
+                                Upload venue photos
+                            </strong>
+
+                            <span>
+                                PNG, JPG or WEBP · Up to 5 images
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="venuePhotos"
+                            name="venuePhotos"
+                            accept="image/png,image/jpeg,image/webp"
+                            multiple
+                            hidden
+                        >
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================================
+                     ACCOUNT
+                ================================= -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            05
+                        </div>
+
+                        <div>
+                            <h2>Create your partner account</h2>
+
+                            <p>
+                                Use these credentials to manage your venue.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="accountPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="accountPassword"
+                                name="accountPassword"
+                                placeholder="Create a password"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">
+                                Confirm password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm password"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">Partner Terms</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </span>
+
+                    </label>
+
+                </section>
+
+
+                <!-- ================================
+                     SUBMIT
+                ================================= -->
+
+                <div class="form-submit">
+
+                    <p>
+                        Your venue will be visible to players
+                        after registration.
+                    </p>
+
+                    <button
+                        type="submit"
+                        class="register-btn"
+                    >
+                        Register Venue
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer class="register-footer">
+
+            <span>© 2026 Sportify</span>
+
+            <a href="../index.html">
+                Back to Sportify
+            </a>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>

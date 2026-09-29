@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Sportify</title>
+
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+
+<body>
+
+    <main class="signup-page">
+
+        <!-- Left Side -->
+        <section class="signup-visual">
+
+            <div class="visual-content">
+
+                <a href="../index.html" class="logo">
+                    SPORTIFY<span>.</span>
+                </a>
+
+                <div class="visual-text">
+                    <p class="eyebrow">YOUR GAME STARTS HERE</p>
+
+                    <h1>
+                        Find your people.<br>
+                        Play your game.
+                    </h1>
+
+                    <p class="visual-description">
+                        Join local players, discover games around you,
+                        and book your favorite sports venues.
+                    </p>
+                </div>
+
+                <div class="signup-stats">
+
+                    <div class="stat">
+                        <strong>10K+</strong>
+                        <span>Players</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>500+</strong>
+                        <span>Games</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>120+</strong>
+                        <span>Venues</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right Side -->
+        <section class="signup-form-section">
+
+            <div class="signup-container">
+
+                <div class="form-header">
+
+                    <a href="../index.html" class="mobile-logo">
+                        SPORTIFY<span>.</span>
+                    </a>
+
+                    <p class="form-eyebrow">PLAYER ACCOUNT</p>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Join Sportify and start playing.
+                    </p>
+
+                </div>
+
+
+                <form class="signup-form" id="signupForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                        >
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone number
+                            <span class="optional">Optional</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+91 98765 43210"
+                            autocomplete="tel"
+                        >
+                    </div>
+
+
+                    <!-- Password Row -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm password</label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm password"
+                                autocomplete="new-password"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- Sports -->
+                    <div class="form-group">
+
+                        <label>
+                            Favorite sports
+                            <span class="optional">Optional</span>
+                        </label>
+
+                        <div class="sport-options">
+
+                            <label class="sport-option">
+                                <input type="checkbox" name="sports" value="cricket">
+                                <span>Cricket</span>
+                            </label>
+
+                            <label class="sport-option">
+                                <input type="checkbox" name="sports" value="football">
+                                <span>Football</span>
+                            </label>
+
+                            <label class="sport-option">
+                                <input type="checkbox" name="sports" value="badminton">
+                                <span>Badminton</span>
+                            </label>
+
+                            <label class="sport-option">
+                                <input type="checkbox" name="sports" value="tennis">
+                                <span>Tennis</span>
+                            </label>
+
+                            <label class="sport-option">
+                                <input type="checkbox" name="sports" value="basketball">
+                                <span>Basketball</span>
+                            </label>
+
+                            <label class="sport-option">
+                                <input type="checkbox" name="sports" value="volleyball">
+                                <span>Volleyball</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Skill + Location -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="skillLevel">Skill level</label>
+
+                            <select id="skillLevel" name="skillLevel">
+
+                                <option value="" selected disabled>
+                                    Select level
+                                </option>
+
+                                <option value="beginner">
+                                    Beginner
+                                </option>
+
+                                <option value="intermediate">
+                                    Intermediate
+                                </option>
+
+                                <option value="advanced">
+                                    Advanced
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="location">City</label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="e.g. Chandigarh"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms of Service</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </span>
+
+                    </label>
+
+
+                    <!-- Submit -->
+                    <button type="submit" class="signup-btn">
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Login -->
+                <div class="login-link">
+
+                    <span>Already have an account?</span>
+
+                    <a href="./login.html">
+                        Log in
+                    </a>
+
+                </div>
+
+
+                <!-- Venue -->
+                <div class="venue-link">
+
+                    <span>Own a sports venue?</span>
+
+                    <a href="./venue-register.html">
+                        Register as a venue partner →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

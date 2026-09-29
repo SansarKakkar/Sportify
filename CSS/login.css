@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* ================= RESET ================= */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "DM Sans", sans-serif;
+color: #151515;
+background: #f7f7f5;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+button,
+input {
+font-family: inherit;
+}
+
+/* ================= PAGE ================= */
+
+.auth-page {
+min-height: 100vh;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.auth-visual {
+position: relative;
+min-height: 100vh;
+padding: 35px 8%;
+background: #111311;
+color: #ffffff;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+}
+
+.logo {
+width: fit-content;
+display: flex;
+align-items: center;
+gap: 9px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: 19px;
+font-weight: 700;
+letter-spacing: 1px;
+
+}
+
+.logo-mark {
+width: 34px;
+height: 34px;
+
+display: grid;
+place-items: center;
+
+border-radius: 9px;
+
+background: #d8f36a;
+color: #111311;
+
+font-size: 17px;
+
+}
+
+.visual-content {
+width: min(480px, 100%);
+margin: auto 0;
+}
+
+.eyebrow {
+color: #d8f36a;
+
+font-size: 10px;
+font-weight: 700;
+
+letter-spacing: 2px;
+
+}
+
+.visual-content h1 {
+margin-top: 20px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: clamp(48px, 5vw, 70px);
+
+line-height: 1;
+letter-spacing: -3px;
+
+}
+
+.visual-content > p {
+max-width: 410px;
+
+margin-top: 25px;
+
+color: #aeb3ae;
+
+font-size: 15px;
+line-height: 1.7;
+
+}
+
+/* ================= GAME CARD ================= */
+
+.visual-game-card {
+width: min(390px, 100%);
+
+margin-top: 45px;
+padding: 24px;
+
+background: #ffffff;
+color: #151515;
+
+border-radius: 15px;
+
+transform: rotate(-2deg);
+
+box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+
+}
+
+.game-card-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.game-card-top span {
+padding: 5px 8px;
+
+border-radius: 4px;
+
+background: #edf6c9;
+color: #617d17;
+
+font-size: 8px;
+font-weight: 800;
+letter-spacing: 1px;
+
+}
+
+.game-card-top small {
+color: #8b908b;
+
+font-size: 9px;
+font-weight: 600;
+
+}
+
+.visual-game-card h3 {
+margin-top: 24px;
+
+font-family: "Space Grotesk", sans-serif;
+font-size: 22px;
+
+}
+
+.visual-game-card > p {
+margin-top: 6px;
+
+color: #777c77;
+font-size: 12px;
+
+}
+
+.game-card-bottom {
+display: flex;
+justify-content: space-between;
+
+margin-top: 25px;
+padding-top: 16px;
+
+border-top: 1px solid #e8e9e6;
+
+font-size: 11px;
+
+}
+
+.visual-footer {
+color: #626862;
+font-size: 11px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.auth-form-section {
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 50px;
+
+}
+
+.auth-form-wrapper {
+width: min(410px, 100%);
+}
+
+.mobile-logo {
+display: none;
+}
+
+/* ================= HEADER ================= */
+
+.form-label {
+color: #75801e;
+
+font-size: 9px;
+font-weight: 800;
+
+letter-spacing: 1.8px;
+
+}
+
+.form-header h2 {
+margin-top: 9px;
+
+font-family: "Space Grotesk", sans-serif;
+
+font-size: 39px;
+line-height: 1.1;
+
+letter-spacing: -1.5px;
+
+}
+
+.form-header p {
+margin-top: 9px;
+
+color: #777c77;
+
+font-size: 13px;
+
+}
+
+/* ================= FORM ================= */
+
+.auth-form {
+margin-top: 35px;
+}
+
+.form-group {
+margin-bottom: 21px;
+}
+
+.form-group label,
+.password-label label {
+display: block;
+
+margin-bottom: 8px;
+
+font-size: 12px;
+font-weight: 600;
+
+}
+
+.password-label {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.password-label a {
+color: #687c1d;
+
+font-size: 11px;
+font-weight: 600;
+
+}
+
+.form-group input {
+width: 100%;
+
+padding: 14px 15px;
+
+border: 1px solid #dfe1dc;
+border-radius: 8px;
+
+outline: none;
+
+background: #ffffff;
+
+font-size: 13px;
+
+transition: border-color 0.2s ease,
+            box-shadow 0.2s ease;
+
+}
+
+.form-group input {
+border-color: #9eb53d;
+
+box-shadow: 0 0 0 3px rgba(216, 243, 106, 0.2);
+
+}
+
+.form-group input::placeholder {
+color: #a4a8a4;
+}
+
+/* ================= REMEMBER ================= */
+
+.remember-row {
+margin: 5px 0 22px;
+}
+
+.checkbox-label {
+display: flex;
+align-items: center;
+gap: 8px;
+
+color: #666b66;
+
+font-size: 11px;
+
+}
+
+.checkbox-label input {
+accent-color: #7f9625;
+}
+
+/* ================= BUTTON ================= */
+
+.submit-btn {
+width: 100%;
+
+padding: 14px;
+
+border: none;
+border-radius: 8px;
+
+background: #151715;
+color: #ffffff;
+
+font-size: 13px;
+font-weight: 700;
+
+cursor: pointer;
+
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+
+transition: transform 0.2s ease,
+            background 0.2s ease;
+
+}
+
+.submit-btn {
+background: #292c29;
+transform: translateY(-2px);
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+display: flex;
+align-items: center;
+gap: 15px;
+
+margin: 27px 0;
+
+color: #a1a5a1;
+
+font-size: 9px;
+font-weight: 700;
+
+}
+
+.divider::before,
+.divider::after {
+content: "";
+
+flex: 1;
+
+height: 1px;
+
+background: #e3e5e1;
+
+}
+
+/* ================= GUEST ================= */
+
+.guest-btn {
+width: 100%;
+
+padding: 13px;
+
+border: 1px solid #dfe1dc;
+border-radius: 8px;
+
+background: transparent;
+
+color: #303430;
+
+font-size: 12px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition: background 0.2s ease;
+
+}
+
+.guest-btn {
+background: #eeeeeb;
+}
+
+/* ================= SIGNUP ================= */
+
+.signup-text {
+margin-top: 24px;
+
+text-align: center;
+
+color: #858a85;
+
+font-size: 11px;
+
+}
+
+.signup-text a {
+color: #63761b;
+font-weight: 700;
+}
+
+/* ================= VENUE SWITCH ================= */
+
+.venue-switch {
+margin-top: 35px;
+padding: 17px;
+
+border: 1px solid #e1e3df;
+border-radius: 10px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 15px;
+
+}
+
+.venue-switch strong,
+.venue-switch span {
+display: block;
+}
+
+.venue-switch strong {
+font-size: 11px;
+}
+
+.venue-switch span {
+margin-top: 3px;
+
+color: #858a85;
+
+font-size: 9px;
+
+}
+
+.venue-switch a {
+white-space: nowrap;
+
+color: #63761b;
+
+font-size: 10px;
+font-weight: 800;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+.auth-page {
+    grid-template-columns: 1fr;
+}
+
+.auth-visual {
+    display: none;
+}
+
+.auth-form-section {
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.mobile-logo {
+    display: block;
+    margin-bottom: 60px;
+}
+
+}
+
+@media (max-width: 500px) {
+
+.auth-form-section {
+    padding: 25px 20px;
+}
+
+.mobile-logo {
+    margin-bottom: 45px;
+}
+
+.form-header h2 {
+    font-size: 34px;
+}
+
+.venue-switch {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.venue-switch a {
+    margin-top: 5px;
+}
+
+}
