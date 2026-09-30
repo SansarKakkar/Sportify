@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login — Sportify</title>
-
+<script src="../Backend/login.js" defer></script>
 <link rel="stylesheet" href="../css/login.css">
 
 </head>
@@ -91,7 +91,7 @@
             </div>
 
 
-            <form class="auth-form">
+            <form class="auth-form" id="loginForm">
 
                 <div class="form-group">
 
@@ -146,7 +146,8 @@
                 <button
                     type="submit"
                     class="submit-btn"
-                >
+                    onclick="login(event)"
+                >   
                     Login
                     <span>→</span>
                 </button>

@@ -7,7 +7,7 @@
 <title>Sportify — Find Your Next Game</title>
 
 <link rel="stylesheet" href="./css/style.css">
-<script src="./js/app.js" defer></script>
+<script src="./Backend/app.js" defer></script>
 
 </head>
 <body>
@@ -26,9 +26,22 @@
             <a href="#how-it-works">How It Works</a>
         </nav>
 
-        <div class="nav-actions">
-            <a href="./Frontend/role.html" class="btn btn-primary nav-btn">Get Started</a>
+        <div class="nav-actions" id="authActions">
+
+        <div id="loggedOutActions">
+            <a href="./Frontend/role.html" class="btn btn-primary nav-btn">
+                Get Started
+            </a>
         </div>
+
+        <div id="loggedInActions" style="display: none;">
+            <a href="./Frontend/profile.html" class="welcome-link">
+                <span class="welcome-label">Welcome</span>
+                <span id="username" class="welcome-name"></span>
+            </a>
+        </div>
+
+    </div>
 
     </div>
 </header>

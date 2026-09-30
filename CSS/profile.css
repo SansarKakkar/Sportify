@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #111311;
+    color: #f5f5f0;
+    min-height: 100vh;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292d29;
+    background: #111311;
+}
+
+.logo {
+    color: #d8f36a;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #aeb2aa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #d8f36a;
+}
+
+.profile-nav {
+    color: #111311;
+    background: #d8f36a;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* MAIN */
+
+.profile-page {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+
+/* HEADER */
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #d8f36a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.profile-header h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+}
+
+.profile-subtitle {
+    color: #8e938c;
+    font-size: 15px;
+}
+
+
+/* EDIT BUTTON */
+
+.edit-btn {
+    border: 1px solid #3a403a;
+    background: #1b1f1b;
+    color: #f5f5f0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.edit-btn:hover {
+    border-color: #d8f36a;
+    color: #d8f36a;
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+    background: #181b18;
+    border: 1px solid #292d29;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* PROFILE TOP */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 35px;
+    border-bottom: 1px solid #292d29;
+}
+
+.avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: #d8f36a;
+    color: #111311;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.profile-intro h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.profile-intro p {
+    color: #8e938c;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.member-badge {
+    display: inline-block;
+    background: #242a21;
+    color: #d8f36a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* PROFILE SECTIONS */
+
+.profile-section {
+    padding: 32px 35px;
+    border-bottom: 1px solid #292d29;
+}
+
+.profile-section:last-child {
+    border-bottom: none;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h3 {
+    font-size: 19px;
+}
+
+
+/* DETAILS */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.detail-item {
+    background: #111311;
+    border: 1px solid #292d29;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.detail-label {
+    display: block;
+    color: #777d75;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.detail-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* SPORTS */
+
+.sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sport-tag {
+    padding: 10px 15px;
+    background: #242a21;
+    color: #d8f36a;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* SKILL */
+
+.skill-card {
+    background: #111311;
+    border: 1px solid #292d29;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-label {
+    display: block;
+    color: #777d75;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+}
+
+.skill-badge {
+    color: #111311;
+    background: #d8f36a;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ACCOUNT */
+
+.account-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.secondary-btn,
+.logout-btn {
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #f5f5f0;
+    border: 1px solid #3a403a;
+}
+
+.secondary-btn:hover {
+    border-color: #d8f36a;
+    color: #d8f36a;
+}
+
+.logout-btn {
+    background: #2b1b1b;
+    border: 1px solid #563333;
+    color: #ff8d8d;
+}
+
+.logout-btn:hover {
+    background: #3a2020;
+}
+
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid #292d29;
+    padding: 35px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: #777d75;
+    font-size: 13px;
+}
+
+.footer strong {
+    color: #d8f36a;
+    font-size: 18px;
+}
+
+.footer p {
+    margin-top: 5px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .profile-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-header h1 {
+        font-size: 34px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .account-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .profile-page {
+        width: 92%;
+        padding-top: 45px;
+    }
+
+    .profile-top {
+        padding: 25px;
+    }
+
+    .profile-section {
+        padding: 25px;
+    }
+
+    .profile-header h1 {
+        font-size: 30px;
+    }
+
+    .avatar {
+        width: 65px;
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .action-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .secondary-btn,
+    .logout-btn {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

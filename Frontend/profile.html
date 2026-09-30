@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Sportify</title>
+
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="../../index.html" class="logo">
+            SPORTIFY
+        </a>
+
+        <nav class="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="./games.html">Games</a>
+            <a href="./venue.html">Venues</a>
+            <a href="./bookings.html">My Bookings</a>
+        </nav>
+
+        <a href="./profile.html" class="profile-nav">
+            Profile
+        </a>
+
+    </header>
+
+
+    <!-- PROFILE -->
+    <main class="profile-page">
+
+        <section class="profile-header">
+
+            <div>
+                <p class="section-label">MY ACCOUNT</p>
+                <h1>Your Profile</h1>
+                <p class="profile-subtitle">
+                    Manage your personal information and Sportify preferences.
+                </p>
+            </div>
+
+            <button class="edit-btn" id="editProfileBtn">
+                Edit Profile
+            </button>
+
+        </section>
+
+
+        <!-- PROFILE CARD -->
+        <section class="profile-card">
+
+            <div class="profile-top">
+
+                <div class="avatar" id="profileAvatar">
+                    S
+                </div>
+
+                <div class="profile-intro">
+                    <h2 id="profileName">
+                        User Name
+                    </h2>
+
+                    <p id="profileEmail">
+                        user@email.com
+                    </p>
+
+                    <span class="member-badge">
+                        Sportify Member
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- PERSONAL INFORMATION -->
+            <div class="profile-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">PERSONAL INFORMATION</p>
+                        <h3>Basic Details</h3>
+                    </div>
+                </div>
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+                        <span class="detail-label">Full Name</span>
+                        <p id="detailName">User Name</p>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-label">Email</span>
+                        <p id="detailEmail">user@email.com</p>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-label">Phone</span>
+                        <p id="detailPhone">Not provided</p>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-label">City</span>
+                        <p id="detailCity">Not provided</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPORTS -->
+            <div class="profile-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">SPORTS</p>
+                        <h3>Your Sports</h3>
+                    </div>
+                </div>
+
+                <div class="sports-list" id="sportsList">
+
+                    <span class="sport-tag">
+                        Cricket
+                    </span>
+
+                    <span class="sport-tag">
+                        Football
+                    </span>
+
+                    <span class="sport-tag">
+                        Badminton
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKILL -->
+            <div class="profile-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">PLAYER LEVEL</p>
+                        <h3>Skill Level</h3>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+
+                    <div>
+                        <span class="skill-label">
+                            Current Level
+                        </span>
+
+                        <h3 id="skillLevel">
+                            Intermediate
+                        </h3>
+                    </div>
+
+                    <span class="skill-badge">
+                        Player
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT ACTIONS -->
+            <div class="profile-section account-actions">
+
+                <div>
+                    <p class="section-label">ACCOUNT</p>
+                    <h3>Account Actions</h3>
+                </div>
+
+                <div class="action-buttons">
+
+                    <button class="secondary-btn" id="editAccountBtn">
+                        Edit Profile
+                    </button>
+
+                    <button class="logout-btn" id="logoutBtn">
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div>
+            <strong>SPORTIFY</strong>
+            <p>Find your game. Find your people.</p>
+        </div>
+
+        <p>© 2026 Sportify. All rights reserved.</p>
+
+    </footer>
+
+
+</body>
+</html>
