@@ -1,10 +1,9 @@
 
-const request = indexedDB.open("SportifyDB", 2);
+const request = indexedDB.open("SportifyDB", 3);
 
-request.onupgradeneeded = function (event) {
-    const db = event.target.result;
+request.onupgradeneeded = ()=> {
+    const db = request.result;
 
-    // Preserve the existing users store
     if (!db.objectStoreNames.contains("users")) {
         const userStore = db.createObjectStore("users", {
             keyPath: "id",
@@ -16,42 +15,50 @@ request.onupgradeneeded = function (event) {
         });
     }
 
-    // Create the games store
     if (!db.objectStoreNames.contains("games")) {
         const gameStore = db.createObjectStore("games", {
             keyPath: "id",
             autoIncrement: true
         });
 
-        gameStore.createIndex("sport", "sport", {
-            unique: false
+        gameStore.createIndex("sport", "sport", { unique: false });
+        gameStore.createIndex("date", "date", { unique: false });
+        gameStore.createIndex("location", "location", { unique: false });
+        gameStore.createIndex("creatorId", "creatorId", { unique: false });
+    }
+
+    if (!db.objectStoreNames.contains("venueOwners")) {
+        const ownerStore = db.createObjectStore("venueOwners", {
+            keyPath: "id",
+            autoIncrement: true
         });
 
-        gameStore.createIndex("date", "date", {
-            unique: false
+        ownerStore.createIndex("businessEmail", "businessEmail", {
+            unique: true
+        });
+    }
+
+    if (!db.objectStoreNames.contains("venues")) {
+        const venueStore = db.createObjectStore("venues", {
+            keyPath: "id",
+            autoIncrement: true
         });
 
-        gameStore.createIndex("location", "location", {
-            unique: false
-        });
-
-        gameStore.createIndex("creatorId", "creatorId", {
-            unique: false
-        });
+        venueStore.createIndex("ownerId", "ownerId", { unique: false });
+        venueStore.createIndex("sport", "sport", { unique: false });
+        venueStore.createIndex("city", "city", { unique: false });
     }
 };
 
-request.onsuccess = function (event) {
-    const db = event.target.result;
-
-    console.log("SportifyDB connected successfully!");
-    console.log("Available stores:", Array.from(db.objectStoreNames));
+request.onsuccess = ()=> {
+    const db =request.result;
+    console.log("SportifyDB connected. Version:", db.version);
 
     db.onversionchange = function () {
         db.close();
     };
 };
 
-request.onerror = function (event) {
-    console.error("Database error:", event.target.error);
+request.onerror = function () {
+    console.error("Could not open SportifyDB:", request.error);
 };

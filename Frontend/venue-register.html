@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Register Venue | Sportify</title>
-
+    <script src="../Backend/venue-register.js"></script>
     <link rel="stylesheet" href="../css/venue-register.css">
 </head>
 
@@ -259,7 +259,7 @@
 
                             <label class="sport-card">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="sports"
                                     value="cricket"
                                 >
@@ -270,7 +270,7 @@
 
                             <label class="sport-card">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="sports"
                                     value="football"
                                 >
@@ -281,7 +281,7 @@
 
                             <label class="sport-card">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="sports"
                                     value="badminton"
                                 >
@@ -292,7 +292,7 @@
 
                             <label class="sport-card">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="sports"
                                     value="tennis"
                                 >
@@ -303,7 +303,7 @@
 
                             <label class="sport-card">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="sports"
                                     value="basketball"
                                 >
@@ -314,7 +314,7 @@
 
                             <label class="sport-card">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="sports"
                                     value="volleyball"
                                 >
@@ -631,6 +631,8 @@
                                 id="accountPassword"
                                 name="accountPassword"
                                 placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
                             >
 
                         </div>
@@ -647,6 +649,8 @@
                                 id="confirmPassword"
                                 name="confirmPassword"
                                 placeholder="Confirm password"
+                                autocomplete="new-password"
+                                required
                             >
 
                         </div>
@@ -688,6 +692,7 @@
                     <button
                         type="submit"
                         class="register-btn"
+                        onclick="register(event)"
                     >
                         Register Venue
                         <span>→</span>
