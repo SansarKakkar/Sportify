@@ -11,7 +11,7 @@ const signUp = (event) => {
         const phone = document.getElementById("phone");
         const password = document.getElementById("password");
         const confirmPassword = document.getElementById("confirmPassword");
-
+        const city=document.getElementById("location");
         if (fullName.value.trim() === "") {
             throw new Error("Please provide a name");
         }
@@ -31,12 +31,15 @@ const signUp = (event) => {
         if (password.value !== confirmPassword.value) {
             throw new Error("Passwords should be the same");
         }
-
+        if (city.value ==="") {
+            throw new Error("Please provide a city");
+        }
         const user = {
             fullName: fullName.value.trim(),
             email: email.value.trim().toLowerCase(),
             phone: phone.value.trim(),
             password: password.value,
+            city:city.value.trim().toLowerCase(),
             createdAt: Date.now()
         };
 

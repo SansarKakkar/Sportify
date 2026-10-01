@@ -29,6 +29,7 @@ let login=(event)=>{
                 if (user && user.password === password.value) {
                     localStorage.setItem("currentUserId", user.id);
                     console.log(user);
+                    window.location.href = "../../index.html";
                 }
                 else {
                     throw new Error("Credentials are wrong");
