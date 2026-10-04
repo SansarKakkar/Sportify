@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Explore Games | Sportify</title>
-    <script src="../Backend/db.js" defer></script>
-    <script src="../Backend/games.js" defer></script>
+
     <link rel="stylesheet" href="../css/games.css">
+    <script src="../Backend/game.js" defer></script>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
-        <a href="../../index.html" class="logo">SPORTIFY</a>
+        <a href="../index.html" class="logo">SPORTIFY</a>
 
         <nav class="nav-links">
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
             <a href="./games.html" class="active">Games</a>
             <a href="./venue.html">Venues</a>
             <a href="./bookings.html">My Bookings</a>
@@ -37,121 +37,27 @@
             </p>
         </section>
 
-
-        <!-- SEARCH -->
-        <section class="search-section">
-            <div class="search-box">
-                <span class="search-icon">⌕</span>
-                <input
-                    type="search"
-                    id="gameSearch"
-                    placeholder="Search games, sports, venues..."
-                >
-                <button class="search-btn" id="searchBtn" type="button">
-                    Search
-                </button>
-            </div>
-        </section>
-
-
-        <!-- SPORT FILTERS -->
         <section class="sports-filter-section">
             <div class="section-heading">
-                <h2>Choose your sport</h2>
-                <p>Find a game that matches your mood.</p>
-            </div>
-
-            <div class="sport-filters" id="sportFilters">
-                <button class="sport-filter active" data-sport="all" type="button">
-                    <span>⚡</span> All Sports
-                </button>
-
-                <button class="sport-filter" data-sport="football" type="button">
-                    <span>⚽</span> Football
-                </button>
-
-                <button class="sport-filter" data-sport="cricket" type="button">
-                    <span>🏏</span> Cricket
-                </button>
-
-                <button class="sport-filter" data-sport="badminton" type="button">
-                    <span>🏸</span> Badminton
-                </button>
-
-                <button class="sport-filter" data-sport="tennis" type="button">
-                    <span>🎾</span> Tennis
-                </button>
-
-                <button class="sport-filter" data-sport="basketball" type="button">
-                    <span>🏀</span> Basketball
-                </button>
-
-                <button class="sport-filter" data-sport="volleyball" type="button">
-                    <span>🏐</span> Volleyball
-                </button>
-            </div>
-        </section>
-
-
-        <!-- FILTERS -->
-        <section class="filters-section">
-            <div class="filter-heading">
                 <h2>Available games</h2>
+                <p>Find a game and join the action.</p>
+            </div>
+
+            <div class="filter-heading">
                 <span class="results-count" id="resultsCount">
-                    Find your game
+                    Loading games...
                 </span>
             </div>
-
-            <div class="filter-controls">
-
-                <div class="filter-group">
-                    <label for="locationFilter">Location</label>
-                    <input
-                        type="text"
-                        id="locationFilter"
-                        placeholder="Enter city"
-                    >
-                </div>
-
-                <div class="filter-group">
-                    <label for="dateFilter">Date</label>
-                    <input type="date" id="dateFilter">
-                </div>
-
-                <div class="filter-group">
-                    <label for="priceFilter">Maximum price</label>
-                    <select id="priceFilter">
-                        <option value="all">Any price</option>
-                        <option value="100">₹100</option>
-                        <option value="200">₹200</option>
-                        <option value="300">₹300</option>
-                        <option value="500">₹500</option>
-                    </select>
-                </div>
-
-                <button type="button" class="clear-filters" id="clearFiltersBtn">
-                    Clear filters
-                </button>
-
-            </div>
         </section>
 
-
-        <!-- GAME CARDS -->
         <section class="game-results">
-            <div class="games-grid" id="gamesGrid">
+            <div class="games-grid" id="gamesGrid"></div>
 
-                <!-- JavaScript will render game cards here -->
-
-            </div>
-
-            <!-- EMPTY STATE -->
-            <div class="empty-state" id="emptyState">
+            <div class="empty-state" id="emptyState" style="display: none;">
                 <div class="empty-icon">🏟️</div>
                 <h3>No games available right now</h3>
                 <p>
-                    Try changing your filters or check back later
-                    for new games.
+                    Check back later for new games.
                 </p>
                 <a href="./venue.html" class="btn-primary">
                     Explore venues
@@ -159,30 +65,26 @@
             </div>
         </section>
 
-
-        <!-- BOTTOM CTA -->
         <section class="create-game-cta">
             <div>
                 <p class="section-label">GOT A GAME IN MIND?</p>
                 <h2>Bring your own game to life.</h2>
                 <p>
-                    Create a game, invite players, and get everyone
-                    on the field.
+                    Choose a venue and create a game for other
+                    players to join.
                 </p>
             </div>
 
-            <button type="button" class="btn-primary" id="createGameBtn">
-                <a href="./venue-register.html">+ Create a game</a>
-            </button>
+            <a href="./venue.html" class="btn-primary">
+                + Create a game
+            </a>
         </section>
 
     </main>
 
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div>
-            <a href="../../index.html" class="logo">SPORTIFY</a>
+            <a href="../index.html" class="logo">SPORTIFY</a>
             <p>Find your game. Find your people.</p>
         </div>
 
@@ -191,4 +93,3 @@
 
 </body>
 </html>
-

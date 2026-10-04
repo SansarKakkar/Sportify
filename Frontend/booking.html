@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Venue | Sportify</title>
+
+    <link rel="stylesheet" href="../css/booking.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <span class="logo-mark">S</span>
+            SPORTIFY
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="./games.html">Games</a>
+            <a href="./venue.html">Venues</a>
+            <a href="./bookings.html">My Bookings</a>
+            <a href="./profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <!-- BOOKING PAGE -->
+    <main class="booking-page">
+
+        <!-- VENUE INFORMATION -->
+        <section class="venue-detail">
+
+            <div class="venue-image-container">
+                <img id="venueImage" src="" alt="Venue">
+            </div>
+
+            <div class="venue-info">
+
+                <p class="section-label">VENUE</p>
+
+                <h1 id="venueName">Loading venue...</h1>
+
+                <p id="venueLocation" class="venue-location"></p>
+
+                <p id="venueSport" class="venue-sport"></p>
+
+                <p id="venueDescription" class="venue-description"></p>
+
+                <div class="venue-meta">
+                    <div>
+                        <span>COURTS</span>
+                        <strong id="venueCourts">-</strong>
+                    </div>
+
+                    <div>
+                        <span>OPEN</span>
+                        <strong id="venueOpening">-</strong>
+                    </div>
+
+                    <div>
+                        <span>CLOSE</span>
+                        <strong id="venueClosing">-</strong>
+                    </div>
+                </div>
+
+                <div class="venue-price">
+                    <strong>₹<span id="venuePrice">0.00</span></strong>
+                    <span>/ hour</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BOOKING FORM -->
+        <section class="booking-section">
+
+            <div class="booking-header">
+                <p class="section-label">CREATE A GAME</p>
+                <h2>Choose your game details</h2>
+                <p>Select a date and the number of players.</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+
+                <div class="form-group">
+                    <label for="bookingDate">Game Date</label>
+
+                    <input
+                        type="date"
+                        id="bookingDate"
+                        name="bookingDate"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="playerCount">
+                        Maximum Number of Players
+                    </label>
+
+                    <input
+                        type="number"
+                        id="playerCount"
+                        name="playerCount"
+                        min="1"
+                        value="1"
+                        required
+                    >
+
+                    <small id="playerLimit">
+                        Choose how many players can participate.
+                    </small>
+                </div>
+
+                <!-- PRICE SUMMARY -->
+                <div class="booking-summary">
+
+                    <div>
+                        <span>Total Venue Price</span>
+                        <strong id="sessionPrice">₹0.00</strong>
+                    </div>
+
+                    <div>
+                        <span>Maximum Players</span>
+                        <strong id="summaryPlayers">1</strong>
+                    </div>
+
+                    <div>
+                        <span>Price Per Player</span>
+                        <strong id="pricePerPlayer">₹0.00</strong>
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="confirm-booking-btn"
+                >
+                    Create Game
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Load JavaScript once, after the page content -->
+    <script src="../Backend/booking.js" defer></script>
+
+</body>
+</html>

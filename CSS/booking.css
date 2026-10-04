@@ -1,0 +1,589 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f7f5;
+    color: #151515;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 72px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111311;
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #d8f36a;
+    color: #111311;
+
+    font-size: 17px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    font-size: 13px;
+}
+
+.nav-links a {
+    color: #c8ccc7;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #d8f36a;
+}
+
+
+/* ================= PAGE ================= */
+
+.booking-page {
+    width: min(1150px, 90%);
+
+    margin: 55px auto 80px;
+}
+
+
+/* ================= VENUE DETAILS ================= */
+
+.venue-detail {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid #dedfdb;
+}
+
+.venue-image-container {
+    min-height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #111311;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venue-image-container img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 430px;
+
+    object-fit: cover;
+}
+
+.venue-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-label {
+    color: #75801e;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.venue-info h1 {
+    margin-top: 12px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.venue-location {
+    margin-top: 15px;
+
+    color: #6f746f;
+
+    font-size: 14px;
+}
+
+.venue-sport {
+    width: fit-content;
+
+    margin-top: 16px;
+    padding: 7px 11px;
+
+    border-radius: 6px;
+
+    background: #edf6c9;
+    color: #617d17;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.venue-description {
+    max-width: 520px;
+
+    margin-top: 20px;
+
+    color: #777c77;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ================= VENUE META ================= */
+
+.venue-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.venue-meta div {
+    padding: 15px;
+
+    border: 1px solid #dedfdc;
+    border-radius: 9px;
+
+    background: #ffffff;
+}
+
+.venue-meta span {
+    display: block;
+
+    color: #929792;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.venue-meta strong {
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 13px;
+}
+
+
+/* ================= PRICE ================= */
+
+.venue-price {
+    margin-top: 28px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+}
+
+.venue-price strong {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 30px;
+}
+
+.venue-price span {
+    color: #858a85;
+
+    font-size: 12px;
+}
+
+
+/* ================= BOOKING SECTION ================= */
+
+.booking-section {
+    width: min(760px, 100%);
+
+    margin: 60px auto 0;
+}
+
+.booking-header {
+    text-align: center;
+}
+
+.booking-header h2 {
+    margin-top: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 36px;
+
+    letter-spacing: -1px;
+}
+
+.booking-header > p:last-child {
+    max-width: 500px;
+
+    margin: 10px auto 0;
+
+    color: #777c77;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ================= FORM ================= */
+
+.booking-form {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    border: 1px solid #dedfdc;
+    border-radius: 14px;
+
+    background: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #dfe1dc;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #222522;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #9eb53d;
+
+    box-shadow: 0 0 0 3px rgba(216, 243, 106, 0.2);
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #8a8f8a;
+
+    font-size: 10px;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.booking-summary {
+    margin-top: 30px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    border-radius: 10px;
+
+    background: #f3f4ef;
+}
+
+.booking-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.booking-summary span {
+    color: #858a85;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.booking-summary strong {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 18px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.confirm-booking-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #151715;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.confirm-booking-btn:hover {
+    background: #292c29;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .venue-detail {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .venue-image-container,
+    .venue-image-container img {
+        min-height: 330px;
+    }
+
+    .venue-info h1 {
+        font-size: 44px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 14px;
+
+        flex-wrap: wrap;
+
+        font-size: 11px;
+    }
+
+    .booking-page {
+        width: calc(100% - 30px);
+
+        margin-top: 30px;
+    }
+
+    .venue-image-container,
+    .venue-image-container img {
+        min-height: 240px;
+    }
+
+    .venue-info h1 {
+        font-size: 36px;
+    }
+
+    .venue-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-section {
+        margin-top: 45px;
+    }
+
+    .booking-header h2 {
+        font-size: 29px;
+    }
+
+    .booking-form {
+        padding: 20px;
+    }
+
+    .booking-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.time-slot {
+    min-height: 70px;
+    padding: 16px 12px;
+    border: 1px solid #22c55e;
+    border-radius: 12px;
+    background: #166534;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Available slots */
+.time-slot.available {
+    background: #166534;
+    border-color: #22c55e;
+    color: #ffffff;
+}
+
+.time-slot.available:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Booked slots */
+.time-slot.booked,
+.time-slot:disabled {
+    background: #7f1d1d;
+    border-color: #ef4444;
+    color: #fecaca;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* Selected slot */
+.time-slot.selected {
+    background: #171917;
+    border: 2px solid #d8f36a;
+    color: #d8f36a;
+    box-shadow: 0 0 0 2px rgba(216, 243, 106, 0.15);
+}
+
+@media (max-width: 700px) {
+    .time-slots {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .time-slot {
+        min-height: 60px;
+        padding: 14px 8px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    .time-slots {
+        grid-template-columns: 1fr;
+    }
+}

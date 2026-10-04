@@ -82,12 +82,7 @@ const displayVenue=(venues)=>{
         price.textContent = `₹${venue.price} / hour`;
 
         card.onclick = () => {
-            alert(
-                `${venue.venueName}\n` +
-                `Sport: ${venue.sport}\n` +
-                `Price: ₹${venue.price} per hour\n` +
-                `Location: ${venue.city}`
-            );
+            window.location.href=`../Frontend/booking.html?id=${venue.id}`;
         };
 
         content.append(
