@@ -1,7 +1,7 @@
 const currentUserId = localStorage.getItem("currentUserId");
 console.log("Current user ID:", currentUserId);
 if(currentUserId){
-    const dbRequest = indexedDB.open("SportifyDB", 1);
+    const dbRequest = indexedDB.open("SportifyDB", 3);
     dbRequest.onsuccess = () => {
         const db = dbRequest.result;
 

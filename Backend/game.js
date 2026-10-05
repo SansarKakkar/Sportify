@@ -102,15 +102,27 @@ request.onsuccess = () => {
                 joinButton.textContent = "+ Join";
                 joinButton.type = "button";
 
-                joinButton.addEventListener("click", () => {
-                    const currentPlayers = game.players.length;
-
+                joinButton.onclick=()=>{
+                    const currentUserID=localStorage.getItem("currentUserId");
+                    const currentPlayers=game.players.length;
+                    console.log(currentUserID);
+                    if(!currentUserID){
+                        alert("please log in");
+                        return;
+                    }
                     if (currentPlayers >= game.maxPlayers) {
                         return;
                     }
+                    const alreadyJoined = game.players.some(player => Number(player) === Number(currentUserID));
 
-                    game.players.push(null);
-
+                    if (alreadyJoined) {
+                        alert("you have already booked");
+                        return;
+                    }
+                    const transaction = db.transaction(["games"], "readwrite");
+                    const store = transaction.objectStore("games");
+                    game.players.push(currentUserID);
+                    const request = store.put(game); 
                     players.textContent =
                         `Players joined: ${game.players.length}/${game.maxPlayers}`;
 
@@ -119,7 +131,7 @@ request.onsuccess = () => {
                         joinButton.textContent = "Game Full";
                         joinButton.disabled = true;
                     }
-                });
+                }
 
                 gameCard.append(
                     imageContainer,
@@ -139,7 +151,6 @@ request.onsuccess = () => {
         };
     };
 
-    transaction.oncomplete = () => db.close();
 };
 
 request.onerror = () => {

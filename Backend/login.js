@@ -5,7 +5,7 @@ let login=(event)=>{
         const password = document.getElementById("password");
         console.log(email.value);
         console.log(password.value);
-        const dbRequest = indexedDB.open("SportifyDB", 1);
+        const dbRequest = indexedDB.open("SportifyDB", 3);
         dbRequest.onsuccess = () => {
 
             console.log("Database opened successfully");
@@ -28,8 +28,8 @@ let login=(event)=>{
                 const user = request.result;
                 if (user && user.password === password.value) {
                     localStorage.setItem("currentUserId", user.id);
+                    window.location.href = "../index.html";
                     console.log(user);
-                    window.location.href = "../../index.html";
                 }
                 else {
                     throw new Error("Credentials are wrong");
