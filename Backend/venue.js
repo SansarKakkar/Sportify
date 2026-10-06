@@ -1,3 +1,25 @@
+let allVenues = [];
+
+const searchInput = () => {
+    const searchValue = document.getElementById("venueSearch").value.toLowerCase().trim();
+    const locationValue = document.getElementById("locationSearch").value.toLowerCase().trim();
+
+    const filteredVenues = allVenues.filter((venue) => {
+        const searchableText = [venue.venueName, venue.sport, venue.city, venue.address]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+        const venueLocation = [venue.city, venue.address]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+
+        return searchableText.includes(searchValue) && venueLocation.includes(locationValue);
+    });
+
+    displayVenue(filteredVenues);
+};
+
 const loadvenue=()=>{
     const openRequest=indexedDB.open("SportifyDB",3);
     openRequest.onsuccess=()=>{
@@ -6,15 +28,12 @@ const loadvenue=()=>{
         const store=transaction.objectStore("venues");
         const getRequest=store.getAll();
         getRequest.onsuccess=()=>{
-            const venue=getRequest.result;
-            displayVenue(venue);
+            allVenues = getRequest.result;
+            displayVenue(allVenues);
         }
         getRequest.onerror=()=>{
             console.error("Could not retrieve venues:", getRequest.error);
         }
-        transaction.oncomplete=()=>{
-            db.close();
-        };
     };
     openRequest.onerror=()=>{
         console.error("Could not open SportifyDB:", openRequest.error);
@@ -99,3 +118,15 @@ const displayVenue=(venues)=>{
 }
 
 loadvenue();
+
+document.getElementById("searchVenuesBtn").addEventListener("click", searchInput);
+document.getElementById("venueSearch").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchInput();
+    }
+});
+document.getElementById("locationSearch").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchInput();
+    }
+});
