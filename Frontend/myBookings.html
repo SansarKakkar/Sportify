@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings | Sportify</title>
+
+    <link rel="stylesheet" href="../css/games.css">
+    <script src="../Backend/myBookings.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <a href="../index.html" class="logo">
+            <span class="logo-mark">S</span>
+            SPORTIFY
+        </a>
+
+        <div class="nav-links">
+            <a href="./games.html">Games</a>
+            <a href="./venue.html">Venues</a>
+            <a href="./bookings.html" class="active">My Bookings</a>
+            <a href="./profile.html">Profile</a>
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE -->
+
+    <main class="games-page">
+
+        <div class="page-intro">
+
+            <p class="section-label">YOUR ACTIVITY</p>
+
+            <div class="intro-text">
+                <h1>My Bookings</h1>
+
+                <p>
+                    View the games you have joined.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <section class="game-results">
+
+            <div class="section-heading">
+
+                <h2>Your Games</h2>
+
+                <span id="resultsCount">
+                    0 bookings
+                </span>
+
+            </div>
+
+
+            <div id="bookingsGrid" class="games-grid"></div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div id="emptyState" class="empty-state">
+
+                <div class="empty-icon">
+                    🏟️
+                </div>
+
+                <h3>No bookings yet</h3>
+
+                <p>
+                    You haven't joined any games yet.
+                </p>
+
+                <a href="./games.html" class="btn-primary">
+                    Find a Game
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>© 2026 Sportify. Play together.</p>
+
+    </footer>
+
+</body>
+
+</html>
