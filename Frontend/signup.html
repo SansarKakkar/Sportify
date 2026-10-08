@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,13 +89,8 @@
                     <div class="form-group">
                         <label for="fullName">Full name</label>
 
-                        <input
-                            type="text"
-                            id="fullName"
-                            name="fullName"
-                            placeholder="Enter your full name"
-                            autocomplete="name"
-                        >
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                            autocomplete="name">
                     </div>
 
 
@@ -102,13 +98,7 @@
                     <div class="form-group">
                         <label for="email">Email address</label>
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            autocomplete="email"
-                        >
+                        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
                     </div>
 
 
@@ -119,13 +109,7 @@
                             <span class="optional">Optional</span>
                         </label>
 
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="+91 98765 43210"
-                            autocomplete="tel"
-                        >
+                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel">
                     </div>
 
 
@@ -135,25 +119,15 @@
                         <div class="form-group">
                             <label for="password">Password</label>
 
-                            <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                placeholder="Create a password"
-                                autocomplete="new-password"
-                            >
+                            <input type="password" id="password" name="password" placeholder="Create a password"
+                                autocomplete="new-password">
                         </div>
 
                         <div class="form-group">
                             <label for="confirmPassword">Confirm password</label>
 
-                            <input
-                                type="password"
-                                id="confirmPassword"
-                                name="confirmPassword"
-                                placeholder="Confirm password"
-                                autocomplete="new-password"
-                            >
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm password" autocomplete="new-password">
                         </div>
 
                     </div>
@@ -207,19 +181,14 @@
                     <!-- Skill + Location -->
                     <div class="form-row">
 
-                        
+
 
 
                         <div class="form-group">
 
                             <label for="location">City</label>
 
-                            <input
-                                type="text"
-                                id="location"
-                                name="location"
-                                placeholder="e.g. Chandigarh"
-                            >
+                            <input type="text" id="location" name="location" placeholder="e.g. Chandigarh">
 
                         </div>
 
@@ -229,11 +198,7 @@
                     <!-- Terms -->
                     <label class="terms">
 
-                        <input
-                            type="checkbox"
-                            id="terms"
-                            name="terms"
-                        >
+                        <input type="checkbox" id="terms" name="terms">
 
                         <span>
                             I agree to the
@@ -284,4 +249,24 @@
     </main>
 
 </body>
+
+</html>
+<div class="sportify-popup-card">
+    <button type="button" class="sportify-popup-close" id="signupPopupClose">✕</button>
+    <div class="sportify-popup-icon-wrap success" id="signupPopupIcon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5" />
+        </svg>
+    </div>
+    <h3 class="sportify-popup-title" id="signupPopupTitle">Account Created Successfully!</h3>
+    <p class="sportify-popup-message" id="signupPopupMessage">Welcome to Sportify! Please sign in to get started.</p>
+    <div class="sportify-popup-actions">
+        <button type="button" class="sportify-popup-btn" id="signupPopupBtn">Sign In</button>
+    </div>
+</div>
+</div>
+
+</body>
+
 </html>

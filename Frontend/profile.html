@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Profile | Sportify</title>
-    <Script src="../Backend/profile.js" defer></Script>
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="../Backend/app.js" defer></script>
+    <script src="../Backend/profile.js" defer></script>
 </head>
 
 <body>
 
     <!-- NAVBAR -->
     <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">S</span>
+                <span>SPORTIFY</span>
+            </a>
 
-        <a href="../../index.html" class="logo">
-            SPORTIFY
-        </a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="./games.html">Games</a>
+                <a href="./venue.html">Venues</a>
+                <a href="./myBookings.html">My Bookings</a>
+            </nav>
 
-        <nav class="nav-links">
-            <a href="../../index.html">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./venue.html">Venues</a>
-            <a href="./bookings.html">My Bookings</a>
-        </nav>
+            <div class="nav-actions" id="authActions">
+                <div id="loggedOutActions">
+                    <a href="./role.html" class="btn btn-primary nav-btn">
+                        Get Started
+                    </a>
+                </div>
 
-        <a href="./profile.html" class="profile-nav">
-            Profile
-        </a>
-
+                <div id="loggedInActions" style="display: none;">
+                    <a href="./profile.html" class="welcome-link">
+                        <span class="welcome-label">Welcome</span>
+                        <span class="welcome-name"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
 
@@ -185,4 +200,5 @@
 
 
 </body>
+
 </html>

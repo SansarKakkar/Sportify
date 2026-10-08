@@ -1,29 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Explore Games | Sportify</title>
 
-    <link rel="stylesheet" href="../css/games.css">
+    <link rel="stylesheet" href="../CSS/games.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="../Backend/app.js" defer></script>
     <script src="../Backend/game.js" defer></script>
 </head>
 
 <body>
 
     <header class="navbar">
-        <a href="../index.html" class="logo">SPORTIFY</a>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">S</span>
+                <span>SPORTIFY</span>
+            </a>
 
-        <nav class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="./games.html" class="active">Games</a>
-            <a href="./venue.html">Venues</a>
-            <a href="./bookings.html">My Bookings</a>
-        </nav>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="./games.html" class="active">Games</a>
+                <a href="./venue.html">Venues</a>
+                <a href="./myBookings.html">My Bookings</a>
+            </nav>
 
-        <a href="./profile.html" class="profile-nav">My Profile</a>
+            <div class="nav-actions" id="authActions">
+                <div id="loggedOutActions">
+                    <a href="./role.html" class="btn btn-primary nav-btn">
+                        Get Started
+                    </a>
+                </div>
+
+                <div id="loggedInActions" style="display: none;">
+                    <a href="./profile.html" class="welcome-link">
+                        <span class="welcome-label">Welcome</span>
+                        <span class="welcome-name"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="games-page">
@@ -37,11 +57,7 @@
             </p>
         </section>
         <div class="search-box">
-        <input
-            type="text"
-            id="gameSearch"
-            placeholder="Search games..."
-        >
+            <input type="text" id="gameSearch" placeholder="Search games...">
         </div>
 
         <section class="browse-section">
@@ -136,4 +152,22 @@
     </footer>
 
 </body>
+
+</html> <button type="button" class="sportify-popup-close" id="gamePopupClose">✕</button>
+<div class="sportify-popup-icon-wrap success" id="gamePopupIcon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6L9 17l-5-5" />
+    </svg>
+</div>
+<h3 class="sportify-popup-title" id="gamePopupTitle">Game Booked!</h3>
+<p class="sportify-popup-message" id="gamePopupMessage">You have successfully joined the game.</p>
+<div class="sportify-popup-actions">
+    <button type="button" class="sportify-popup-btn" id="gamePopupBtn">Awesome!</button>
+</div>
+</div>
+</div>
+
+</body>
+
 </html>

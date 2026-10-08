@@ -1,6 +1,6 @@
-let login=(event)=>{
+let login = (event) => {
     event.preventDefault();
-    try{
+    try {
         const email = document.getElementById("email");
         const password = document.getElementById("password");
         console.log(email.value);
@@ -37,16 +37,16 @@ let login=(event)=>{
             };
         };
     }
-    catch(err){
+    catch (err) {
         console.error(err.message);
         alert(err.message);
     }
 };
 const logout = () => {
-    try{
+    try {
         localStorage.removeItem("currentUserId");
     }
-    catch(err){
+    catch (err) {
         console.log("please login");
     }
 };

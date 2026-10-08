@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
@@ -163,7 +162,7 @@ select {
     color: var(--lime);
 }
 
-.hero-content > p {
+.hero-content>p {
     max-width: 450px;
     margin-top: 18px;
     color: #adb4ab;
@@ -202,7 +201,7 @@ select {
     font-size: 17px;
 }
 
-.hero-stat > span:last-child {
+.hero-stat>span:last-child {
     color: #a5aca2;
     font-size: 11px;
 }
@@ -211,7 +210,7 @@ select {
 
 .venue-search-section {
     display: grid;
-    grid-template-columns: 1.5fr 1fr auto;
+    grid-template-columns: 1fr auto;
     gap: 12px;
     margin: 25px 0 55px;
     padding: 17px;
@@ -234,7 +233,7 @@ select {
 }
 
 .search-icon,
-.location-box > span {
+.location-box>span {
     color: #7a8d2e;
     font-size: 20px;
 }
@@ -716,7 +715,7 @@ select {
         letter-spacing: -2px;
     }
 
-    .hero-content > p {
+    .hero-content>p {
         font-size: 12px;
     }
 

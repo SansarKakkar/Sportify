@@ -1,21 +1,30 @@
-const currentUserId = localStorage.getItem("currentUserId");
-if(currentUserId){
+(function () {
+    const activeUserId = localStorage.getItem("currentUserId");
+    if (!activeUserId) return;
+
     const dbRequest = indexedDB.open("SportifyDB", 3);
 
     dbRequest.onsuccess = () => {
         const db = dbRequest.result;
+        if (!db.objectStoreNames.contains("users")) return;
 
         const transaction = db.transaction("users", "readonly");
         const userStore = transaction.objectStore("users");
 
-        const request = userStore.get(Number(currentUserId));
+        const request = userStore.get(Number(activeUserId));
 
         request.onsuccess = () => {
             const user = request.result;
-            document.getElementById("loggedOutActions").style.display = "none";
-            document.getElementById("loggedInActions").style.display = "block";
-            document.getElementById("username").textContent = user.fullName;
-            console.log(user);
+            if (user) {
+                const loggedOut = document.getElementById("loggedOutActions");
+                const loggedIn = document.getElementById("loggedInActions");
+                if (loggedOut) loggedOut.style.display = "none";
+                if (loggedIn) loggedIn.style.display = "block";
+
+                document.querySelectorAll(".welcome-name").forEach((el) => {
+                    el.textContent = user.fullName;
+                });
+            }
         };
-    }
-};
+    };
+})();

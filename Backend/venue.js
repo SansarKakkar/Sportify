@@ -2,44 +2,39 @@ let allVenues = [];
 
 const searchInput = () => {
     const searchValue = document.getElementById("venueSearch").value.toLowerCase().trim();
-    const locationValue = document.getElementById("locationSearch").value.toLowerCase().trim();
 
     const filteredVenues = allVenues.filter((venue) => {
         const searchableText = [venue.venueName, venue.sport, venue.city, venue.address]
             .filter(Boolean)
             .join(" ")
             .toLowerCase();
-        const venueLocation = [venue.city, venue.address]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase();
 
-        return searchableText.includes(searchValue) && venueLocation.includes(locationValue);
+        return searchableText.includes(searchValue);
     });
 
     displayVenue(filteredVenues);
 };
 
-const loadvenue=()=>{
-    const openRequest=indexedDB.open("SportifyDB",3);
-    openRequest.onsuccess=()=>{
-        const db=openRequest.result;
-        const transaction=db.transaction("venues","readonly");
-        const store=transaction.objectStore("venues");
-        const getRequest=store.getAll();
-        getRequest.onsuccess=()=>{
+const loadvenue = () => {
+    const openRequest = indexedDB.open("SportifyDB", 3);
+    openRequest.onsuccess = () => {
+        const db = openRequest.result;
+        const transaction = db.transaction("venues", "readonly");
+        const store = transaction.objectStore("venues");
+        const getRequest = store.getAll();
+        getRequest.onsuccess = () => {
             allVenues = getRequest.result;
             displayVenue(allVenues);
         }
-        getRequest.onerror=()=>{
+        getRequest.onerror = () => {
             console.error("Could not retrieve venues:", getRequest.error);
         }
     };
-    openRequest.onerror=()=>{
+    openRequest.onerror = () => {
         console.error("Could not open SportifyDB:", openRequest.error);
     };
 }
-const displayVenue=(venues)=>{
+const displayVenue = (venues) => {
     const venuesGrid = document.getElementById("venuesGrid");
     const resultsCount = document.getElementById("venueResultsCount");
     const emptyState = document.getElementById("venuesEmptyState");
@@ -101,7 +96,7 @@ const displayVenue=(venues)=>{
         price.textContent = `₹${venue.price} / hour`;
 
         card.onclick = () => {
-            window.location.href=`../Frontend/booking.html?id=${venue.id}`;
+            window.location.href = `../Frontend/booking.html?id=${venue.id}`;
         };
 
         content.append(
@@ -125,8 +120,11 @@ document.getElementById("venueSearch").addEventListener("keydown", (event) => {
         searchInput();
     }
 });
-document.getElementById("locationSearch").addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        searchInput();
-    }
-});
+const locationSearchInput = document.getElementById("locationSearch");
+if (locationSearchInput) {
+    locationSearchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            searchInput();
+        }
+    });
+}

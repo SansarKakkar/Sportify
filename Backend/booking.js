@@ -22,12 +22,12 @@ openRequest.onsuccess = () => {
         document.getElementById("venueName").textContent = venue.venueName;
         document.getElementById("venueLocation").textContent = venue.address;
         document.getElementById("venueSport").textContent = venue.sport;
-        document.getElementById("venueDescription").textContent =venue.description || "";
+        document.getElementById("venueDescription").textContent = venue.description || "";
         document.getElementById("venueCourts").textContent = venue.courts;
         document.getElementById("venueOpening").textContent = venue.openingTime;
         document.getElementById("venueClosing").textContent = venue.closingTime;
-        document.getElementById("venuePrice").textContent =Number(venue.price).toFixed(2);
-        document.getElementById("venueImage").src =URL.createObjectURL(venue.photos[0]);
+        document.getElementById("venuePrice").textContent = Number(venue.price).toFixed(2);
+        document.getElementById("venueImage").src = URL.createObjectURL(venue.photos[0]);
         updatePriceSummary();
     };
 
@@ -63,13 +63,13 @@ const updatePriceSummary = () => {
     const playerCount = Number(document.getElementById("playerCount").value);
 
     const totalPrice = Number(selectedVenue.price);
-    const pricePerPlayer =playerCount > 0 ? totalPrice / playerCount : 0;
+    const pricePerPlayer = playerCount > 0 ? totalPrice / playerCount : 0;
 
-    document.getElementById("sessionPrice").textContent =`₹${totalPrice.toFixed(2)}`;
+    document.getElementById("sessionPrice").textContent = `₹${totalPrice.toFixed(2)}`;
 
-    document.getElementById("summaryPlayers").textContent =playerCount || 0;
+    document.getElementById("summaryPlayers").textContent = playerCount || 0;
 
-    document.getElementById("pricePerPlayer").textContent =`₹${pricePerPlayer.toFixed(2)}`;
+    document.getElementById("pricePerPlayer").textContent = `₹${pricePerPlayer.toFixed(2)}`;
 };
 
 document.getElementById("playerCount").addEventListener(

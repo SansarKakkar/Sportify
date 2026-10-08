@@ -1,31 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Book Venue | Sportify</title>
 
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../CSS/booking.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="../Backend/app.js" defer></script>
 </head>
 
 <body>
 
     <!-- NAVBAR -->
     <header class="navbar">
-        <a href="../index.html" class="logo">
-            <span class="logo-mark">S</span>
-            SPORTIFY
-        </a>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">S</span>
+                <span>SPORTIFY</span>
+            </a>
 
-        <nav class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./venue.html">Venues</a>
-            <a href="./bookings.html">My Bookings</a>
-            <a href="./profile.html">Profile</a>
-        </nav>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="./games.html">Games</a>
+                <a href="./venue.html">Venues</a>
+                <a href="./myBookings.html">My Bookings</a>
+            </nav>
+
+            <div class="nav-actions" id="authActions">
+                <div id="loggedOutActions">
+                    <a href="./role.html" class="btn btn-primary nav-btn">
+                        Get Started
+                    </a>
+                </div>
+
+                <div id="loggedInActions" style="display: none;">
+                    <a href="./profile.html" class="welcome-link">
+                        <span class="welcome-label">Welcome</span>
+                        <span class="welcome-name"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- BOOKING PAGE -->
@@ -90,12 +108,7 @@
                 <div class="form-group">
                     <label for="bookingDate">Game Date</label>
 
-                    <input
-                        type="date"
-                        id="bookingDate"
-                        name="bookingDate"
-                        required
-                    >
+                    <input type="date" id="bookingDate" name="bookingDate" required>
                 </div>
 
                 <div class="form-group">
@@ -103,14 +116,7 @@
                         Maximum Number of Players
                     </label>
 
-                    <input
-                        type="number"
-                        id="playerCount"
-                        name="playerCount"
-                        min="1"
-                        value="1"
-                        required
-                    >
+                    <input type="number" id="playerCount" name="playerCount" min="1" value="1" required>
 
                     <small id="playerLimit">
                         Choose how many players can participate.
@@ -137,10 +143,7 @@
 
                 </div>
 
-                <button
-                    type="submit"
-                    class="confirm-booking-btn"
-                >
+                <button type="submit" class="confirm-booking-btn">
                     Create Game
                 </button>
 
@@ -154,4 +157,23 @@
     <script src="../Backend/booking.js" defer></script>
 
 </body>
+
+</html> <button type="button" class="sportify-popup-close" id="bookingPopupClose">✕</button>
+<div class="sportify-popup-icon-wrap success" id="bookingPopupIcon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6L9 17l-5-5" />
+    </svg>
+</div>
+<h3 class="sportify-popup-title" id="bookingPopupTitle">Game Created Successfully!</h3>
+<p class="sportify-popup-message" id="bookingPopupMessage">Your game has been created and is now open for players to
+    join.</p>
+<div class="sportify-popup-actions">
+    <button type="button" class="sportify-popup-btn" id="bookingPopupBtn">View Games</button>
+</div>
+</div>
+</div>
+
+</body>
+
 </html>

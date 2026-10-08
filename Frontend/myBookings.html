@@ -7,7 +7,9 @@
 
     <title>My Bookings | Sportify</title>
 
-    <link rel="stylesheet" href="../css/games.css">
+    <link rel="stylesheet" href="../CSS/games.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="../Backend/app.js" defer></script>
     <script src="../Backend/myBookings.js" defer></script>
 </head>
 
@@ -15,21 +17,36 @@
 
     <!-- NAVBAR -->
 
-    <nav class="navbar">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">S</span>
+                <span>SPORTIFY</span>
+            </a>
 
-        <a href="../index.html" class="logo">
-            <span class="logo-mark">S</span>
-            SPORTIFY
-        </a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="./games.html">Games</a>
+                <a href="./venue.html">Venues</a>
+                <a href="./myBookings.html" class="active">My Bookings</a>
+            </nav>
 
-        <div class="nav-links">
-            <a href="./games.html">Games</a>
-            <a href="./venue.html">Venues</a>
-            <a href="./bookings.html" class="active">My Bookings</a>
-            <a href="./profile.html">Profile</a>
+            <div class="nav-actions" id="authActions">
+                <div id="loggedOutActions">
+                    <a href="./role.html" class="btn btn-primary nav-btn">
+                        Get Started
+                    </a>
+                </div>
+
+                <div id="loggedInActions" style="display: none;">
+                    <a href="./profile.html" class="welcome-link">
+                        <span class="welcome-label">Welcome</span>
+                        <span class="welcome-name"></span>
+                    </a>
+                </div>
+            </div>
         </div>
-
-    </nav>
+    </header>
 
 
     <!-- PAGE -->

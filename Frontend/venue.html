@@ -1,30 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Venues | Sportify</title>
-    <link rel="stylesheet" href="../css/venue.css">
+    <link rel="stylesheet" href="../CSS/venue.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="../Backend/app.js" defer></script>
     <script src="../Backend/venue.js" defer></script>
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <a href="../index.html" class="logo">
-            <span class="logo-mark">S</span>
-            SPORTIFY
-        </a>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">S</span>
+                <span>SPORTIFY</span>
+            </a>
 
-        <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./venue.html" class="active">Venues</a>
-            <a href="./bookings.html">My Bookings</a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="./games.html">Games</a>
+                <a href="./venue.html" class="active">Venues</a>
+                <a href="./myBookings.html">My Bookings</a>
+            </nav>
+
+            <div class="nav-actions" id="authActions">
+                <div id="loggedOutActions">
+                    <a href="./role.html" class="btn btn-primary nav-btn">
+                        Get Started
+                    </a>
+                </div>
+
+                <div id="loggedInActions" style="display: none;">
+                    <a href="./profile.html" class="welcome-link">
+                        <span class="welcome-label">Welcome</span>
+                        <span class="welcome-name"></span>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <a href="./profile.html" class="nav-action">My Profile ↗</a>
-    </nav>
+    </header>
 
     <main class="venues-page">
 
@@ -48,23 +66,10 @@
         <section class="venue-search-section">
             <div class="search-box">
                 <span class="search-icon">⌕</span>
-                <input
-                    type="search"
-                    id="venueSearch"
-                    placeholder="Search by venue name or location..."
-                    aria-label="Search venues"
-                >
+                <input type="search" id="venueSearch" placeholder="Search by venue name or location..."
+                    aria-label="Search venues">
             </div>
 
-            <div class="location-box">
-                <span>⌖</span>
-                <input
-                    type="text"
-                    id="locationSearch"
-                    placeholder="Enter city or area"
-                    aria-label="Filter by location"
-                >
-            </div>
 
             <button type="button" class="search-btn" id="searchVenuesBtn">
                 Search Venues
@@ -151,4 +156,5 @@
     </footer>
 
 </body>
+
 </html>

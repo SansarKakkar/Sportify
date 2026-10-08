@@ -1,0 +1,131 @@
+/* =========================================================
+   SPORTIFY UNIFIED NAVBAR STYLES
+   ========================================================= */
+
+.navbar {
+    height: 76px;
+    background: #111311;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #232723;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #d8f36a;
+    color: #111311;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #b9bdb9;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d8f36a;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #d8f36a;
+    color: #111311;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: #c8e45a;
+    transform: translateY(-2px);
+}
+
+/* User logged-in welcome pill */
+.welcome-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.welcome-link:hover {
+    background: #1c201c;
+    border-color: rgba(216, 243, 106, 0.3);
+}
+
+.welcome-label {
+    font-size: 12px;
+    color: #8e938c;
+    font-weight: 500;
+}
+
+.welcome-name {
+    font-size: 14px;
+    color: #d8f36a;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
