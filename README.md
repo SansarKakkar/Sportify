@@ -50,11 +50,11 @@
 
 Actual captures from the live application illustrating its modern dark-mode aesthetic, typography, and responsive interface:
 
-### 1. Landing Page & Hero Section (Desktop & Mobile)
-| **Desktop View (1280px)** | **Mobile View (390px)** |
-|:---:|:---:|
-| <img src="images/screenshots/home.png" width="550" alt="GameOn Desktop Landing Page" /> | <img src="images/screenshots/mobile_home.png" width="240" alt="GameOn Mobile Landing Page" /> |
-| *Hero banner with neon accents, real-time search, platform statistics (500+ Games, 100+ Venues, 5K+ Players), and active match highlights.* | *Fully responsive mobile layout with optimized touch targets and stacked cards.* |
+### 1. Landing Page & Hero Section
+| **Desktop View (1280px)** |
+|:---:|
+| <img src="images/screenshots/home.png" width="800" alt="GameOn Desktop Landing Page" /> |
+| *Hero banner with neon accents, real-time search, platform statistics (500+ Games, 100+ Venues, 5K+ Players), and active match highlights.* |
 
 ---
 
