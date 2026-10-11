@@ -1,4 +1,4 @@
-# ⚡ GameOn (Sportify)
+# ⚡ Sportify 
 
 > **Play More. Play Together.** — A modern, responsive, local-first sports venue discovery, turf booking, and community matchmaking web application built entirely with vanilla web technologies.
 
@@ -35,7 +35,7 @@
 
 ## 🌟 Project Overview
 
-**GameOn (Sportify)** is a sports community and turf reservation web platform designed to solve two core challenges:
+**Sportify** is a sports community and turf reservation web platform designed to solve two core challenges:
 1. **For Players**: Finding nearby sports grounds (football turfs, cricket nets, badminton courts, tennis academies, basketball arenas), discovering open pickup games, and splitting venue booking fees transparently among teammates.
 2. **For Venue Owners**: Listing sports facilities, configuring available courts/pitches, setting operating schedules and hourly rates, specifying amenities, and managing customer bookings without expensive cloud infrastructure.
 
@@ -100,7 +100,7 @@ To run this application, you only need:
 ### Step 1: Clone or Download the Repository
 Open your terminal / command prompt and run:
 ```bash
-git clone https://github.com/SansarKakkar/GameOn.git
+git https://github.com/SansarKakkar/Sportify.git
 cd GameOn
 ```
 
@@ -251,7 +251,7 @@ The application implements complete **Create, Read, Update, and Delete** operati
 
 ## 🏟️ Generic Sports Venue Model
 
-Rather than static venue listings, GameOn uses a **generic, extensible sports facility model** capable of representing any indoor or outdoor sports complex:
+Rather than static venue listings, Sportify uses a **generic, extensible sports facility model** capable of representing any indoor or outdoor sports complex:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -368,17 +368,6 @@ For rapid testing without manual data entry:
 
 ---
 
-## 🎓 GitHub & Academic Guidelines Compliance
-
-This repository satisfies all course and project guidelines:
-- [x] **Pure Tech Stack**: HTML5, CSS3, Vanilla JS. Zero external JS libraries.
-- [x] **Responsive Layout**: Validated across Mobile (390px), Tablet (768px), and Desktop (1280px+).
-- [x] **Multi-page Application**: 10+ distinct pages (`index.html`, `role.html`, `venue.html`, `games.html`, `booking.html`, `myBookings.html`, `profile.html`, etc.).
-- [x] **Data Storage**: Comprehensive usage of `IndexedDB` (`SportifyDB` v3), `localStorage`, and session management.
-- [x] **CRUD Operations**: Documented Create, Read, Update, and Delete operations.
-- [x] **Markdown Documentation**: Thorough [README.md](./README.md) with actual UI screenshots and setup instructions.
-- [x] **Version Control**: Hosted on GitHub repository with structured Git commit history.
-
 ---
 
 ## 📄 License
@@ -389,5 +378,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE)
 
 <p align="center">
   <b>Built with ❤️ using Vanilla HTML, CSS, and JavaScript.</b><br>
-  <i>GameOn — Find your next game, meet players, and play together!</i>
+  <i>Sportify — Find your next game, meet players, and play together!</i>
 </p>
