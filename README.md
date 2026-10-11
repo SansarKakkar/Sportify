@@ -66,19 +66,19 @@ Actual captures from the live application illustrating its modern dark-mode aest
 
 ---
 
-### 3. Player Registration & Matchmaking
-| **Player Sign Up (`signup.html`)** | **Community Games Lobby (`games.html`)** |
+### 3. Player Registration & Authentication
+| **Player Sign Up (`signup.html`)** | **Player Sign In (`Login.html`)** |
 |:---:|:---:|
-| <img src="images/screenshots/signup.png" width="450" alt="Player Registration Form" /> | <img src="images/screenshots/games.png" width="450" alt="Games Matchmaking Lobby" /> |
-| *HTML5 client-side form with full validation for name, email, phone, city, and password verification.* | *Filter games by sport category (Football, Cricket, Badminton, Tennis, etc.) with real-time slot counters.* |
+| <img src="images/screenshots/signup.png" width="450" alt="Player Registration Form" /> | <img src="images/screenshots/login.png" width="450" alt="Player Sign In Screen" /> |
+| *HTML5 client-side form with full validation for name, email, phone, city, and password verification.* | *Streamlined player sign-in with guest access option and venue partner portal switch.* |
 
 ---
 
-### 4. Venue Catalog & One-Click Seeder
-| **Venue Exploration (`venue.html`)** | **Database Seeder Utility (`seed.html`)** |
+### 4. Sports Venues & Games Discovery
+| **Venue Exploration (`venue.html`)** | **Community Games Lobby (`games.html`)** |
 |:---:|:---:|
-| <img src="images/screenshots/venues.png" width="450" alt="Venue Catalog Screen" /> | <img src="images/screenshots/seed.png" width="450" alt="Admin Seeder Tool" /> |
-| *Multi-filter facility explorer with real-time text search and sport tag filtering.* | *Administrative utility to pre-populate realistic venues, matches, and photo blobs with one click.* |
+| <img src="images/screenshots/venues.png" width="450" alt="Venue Exploration Screen" /> | <img src="images/screenshots/games.png" width="450" alt="Games Matchmaking Lobby" /> |
+| *Multi-filter facility explorer with real-time text search, sport categories, and hourly rate comparison.* | *Browse and join open games across sports (Football, Cricket, Badminton, Tennis, etc.) with real-time slot counters.* |
 
 ---
 
